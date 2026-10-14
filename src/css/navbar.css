@@ -1,0 +1,479 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.nav {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* CATEGORY */
+
+.category {
+  padding: 18px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  white-space: nowrap;
+
+  background: transparent;
+  border: none;
+
+  color: #333;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.category svg {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  color: #333;
+  stroke: currentColor;
+}
+
+.category span {
+  color: #333;
+}
+
+
+
+.category svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   NAV MENU
+========================================= */
+
+nav ul {
+  display: flex;
+
+  align-items: center;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+
+  color: #333;
+
+  font-size: 16px;
+
+  display: block;
+
+  white-space: nowrap;
+
+  border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover {
+  color: #e91e63;
+
+  border-bottom: 3px solid #e91e63;
+}
+
+nav ul li a.active {
+  color: #e91e63;
+
+  border-bottom: 3px solid #e91e63;
+}
+
+
+/* =========================================
+   ALL CATEGORY WRAPPER
+========================================= */
+
+.category-wrapper {
+  position: relative;
+  z-index: 1001;
+}
+
+
+/* =========================================
+   CATEGORY DROPDOWN
+========================================= */
+
+.category-dropdown {
+  position: absolute;
+
+  top: calc(100% - 11px);
+  left: 0;
+
+  width: 260px;
+
+  max-height: 320px;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+
+  padding: 8px 0;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+
+  animation: categoryDrop 0.2s ease;
+}
+
+
+/* =========================================
+   CATEGORY ITEMS
+========================================= */
+
+.category-dropdown a {
+  display: block;
+
+  padding: 12px 18px;
+
+  color: #333;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.category-dropdown a:hover {
+  background: #fff1f6;
+
+  color: #e91e63;
+
+  padding-left: 23px;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes categoryDrop {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   DROPDOWN SCROLLBAR
+========================================= */
+
+.category-dropdown::-webkit-scrollbar {
+  width: 6px;
+
+  border-radius: 10px;
+}
+
+.category-dropdown::-webkit-scrollbar-track {
+  background: #f5f5f5;
+
+  border-radius: 10px;
+}
+
+.category-dropdown::-webkit-scrollbar-thumb {
+  background: #e91e63;
+
+  border-radius: 10px;
+}
+
+.category-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #c2185b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .container,
+  .top-bar .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .header {
+    gap: 20px;
+  }
+
+  .icons {
+    gap: 18px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .container,
+  .top-bar .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    order: 3;
+
+    flex-basis: 100%;
+  }
+
+  .icons {
+    margin-left: auto;
+  }
+
+  .nav {
+    overflow-x: auto;
+  }
+
+  nav ul li {
+    flex-shrink: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE CATEGORY DROPDOWN
+========================================= */
+
+.mobile-category-dropdown {
+  display: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* Desktop navbar dropdown ko mobile me hide rakho */
+  nav .category-dropdown {
+    display: none;
+  }
+
+  /*
+     Important:
+     Mobile nav agar scrollable hai to dropdown
+     clip ho sakta hai.
+  */
+  .nav {
+    overflow: visible;
+  }
+
+  .mobile-category-dropdown {
+    display: block;
+
+    position: fixed;
+
+    left: 12px;
+    right: 12px;
+
+    bottom: 72px;
+
+    background: #fff;
+
+    border-radius: 14px;
+
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.20);
+
+    border: 1px solid #eee;
+
+    z-index: 99999;
+
+    overflow: hidden;
+
+    animation: mobileCategoryOpen 0.2s ease;
+  }
+
+
+  /* Header */
+
+  .mobile-category-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #eee;
+
+    color: #222;
+  }
+
+
+  .mobile-category-header strong {
+    font-size: 17px;
+  }
+
+
+  .mobile-category-header button {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f5f5f5;
+
+    color: #333;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
+
+  /* Category list */
+
+  .mobile-category-list {
+    max-height: 55vh;
+
+    overflow-y: auto;
+  }
+
+
+  .mobile-category-list a {
+    display: block;
+
+    padding: 14px 18px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 15px;
+
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+
+  .mobile-category-list a:last-child {
+    border-bottom: none;
+  }
+
+
+  .mobile-category-list a:active,
+  .mobile-category-list a:hover {
+    background: #fff1f6;
+
+    color: #e91e63;
+  }
+
+
+  /* Animation */
+
+  @keyframes mobileCategoryOpen {
+
+    from {
+      opacity: 0;
+
+      transform: translateY(15px);
+    }
+
+    to {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .mobile-category-dropdown {
+    left: 8px;
+    right: 8px;
+
+    bottom: 68px;
+
+    border-radius: 12px;
+  }
+
+  .mobile-category-list {
+    max-height: 58vh;
+  }
+
+}

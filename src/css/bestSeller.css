@@ -1,0 +1,903 @@
+/* =========================================================
+   DIVYA CREATION
+   BEST SELLER PAGE
+
+   PRODUCT CARDS:
+   EXACTLY SAME AS SHOP PAGE
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.best-seller-page {
+  --pink: #e91e63;
+  --dark-pink: #c2185b;
+  --gold: #a47738;
+  --black: #292525;
+  --muted: #777;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #fffafc;
+  color: var(--black);
+
+  font-family: "Poppins", sans-serif;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.bs-hero {
+  width: 100%;
+
+  min-height: 125px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(255,255,255,.9),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fff0f5,
+      #ffe1eb,
+      #fff5f8
+    );
+
+  border-bottom: 1px solid #f4dce5;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO DECORATION
+========================================================= */
+
+.bs-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(233,30,99,.05);
+
+  left: -70px;
+  top: -80px;
+}
+
+
+.bs-hero::after {
+  content: "♡";
+
+  position: absolute;
+
+  right: 7%;
+  bottom: -55px;
+
+  font-size: 145px;
+
+  color:
+    rgba(233,30,99,.05);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.bs-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  animation:
+    heroFade .7s ease;
+}
+
+
+.bs-hero-content span {
+  display: block;
+
+  color: var(--gold);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.bs-hero-content h2 {
+  margin: 4px 0;
+
+  color: #292525;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 36px;
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+
+.bs-hero-content p {
+  margin: 5px 0 0;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+
+@keyframes heroFade {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.bs-toolbar {
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding:10px 40px;
+
+  min-height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FILTER BUTTON
+========================================================= */
+
+.bs-filter-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  height: 38px;
+
+  padding: 0 14px;
+
+  border: 1px solid #eadde2;
+
+  border-radius: 6px;
+
+  background: #fff;
+
+  color: #444;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    border-color .25s ease,
+    color .25s ease,
+    background .25s ease;
+}
+
+
+.bs-filter-button:hover {
+  border-color: var(--pink);
+
+  color: var(--pink);
+
+  background: #fff5f8;
+}
+
+
+/* =========================================================
+   SORT
+========================================================= */
+
+.bs-sort {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.bs-sort span {
+  color: #777;
+
+  font-size: 11px;
+}
+
+
+.bs-sort select {
+  width: 190px;
+
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #eadde2;
+
+  border-radius: 6px;
+
+  background: #fff;
+
+  color: #444;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+
+.bs-sort select:hover,
+.bs-sort select:focus {
+  border-color: var(--pink);
+}
+
+
+/* =========================================================
+   FILTER BOX
+========================================================= */
+
+.bs-filter-box {
+  width:
+    calc(100% - 80px);
+
+  max-width: 1200px;
+
+  margin:
+    0 auto 10px;
+
+  padding: 12px;
+
+  background: #fff;
+
+  border:
+    1px solid #eadde2;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  animation:
+    filterSlide .25s ease;
+}
+
+
+.bs-filter-box button {
+  padding: 9px 17px;
+
+  border:
+    1px solid #eadde2;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  color: #555;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+
+.bs-filter-box button:hover {
+  border-color: var(--pink);
+
+  color: var(--pink);
+}
+
+
+@keyframes filterSlide {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+========================================================= */
+
+.bs-product-section {
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding:
+    0 40px 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   USE THE SAME GRID AS SHOP
+========================================================= */
+
+.bs-product-section .jewellery-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =========================================================
+   DO NOT OVERRIDE PRODUCT CARD
+
+   ProductCard.jsx already uses:
+
+   .product-card
+   .product-image
+   .product-images-wrapper
+   .product-main-image
+   .product-hover-image
+   .product-hover-actions
+   .hover-cart-btn
+   .hover-buy-btn
+   .product-info
+   .wishlist-btn
+   .sale-badge
+
+   Therefore the exact Shop CSS controls the card.
+========================================================= */
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.bs-loading {
+  width: 100%;
+
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+.bs-loading .loading-spinner {
+  width: 35px;
+  height: 35px;
+
+  border:
+    3px solid #f8d8e3;
+
+  border-top-color:
+    #e91e63;
+
+  border-radius: 50%;
+
+  animation:
+    bsSpin .8s linear infinite;
+
+  margin-bottom: 12px;
+}
+
+
+@keyframes bsSpin {
+
+  from {
+    transform:
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.bs-empty {
+  width: 100%;
+
+  padding: 65px 20px;
+
+  text-align: center;
+
+  background: #fff;
+
+  border:
+    1px dashed #eadde2;
+
+  border-radius: 10px;
+}
+
+
+.bs-empty > div {
+  color: var(--pink);
+
+  font-size: 45px;
+}
+
+
+.bs-empty h3 {
+  margin: 12px 0 5px;
+
+  color: #333;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 28px;
+}
+
+
+.bs-empty p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .bs-toolbar {
+    padding-left: 25px;
+
+    padding-right: 25px;
+  }
+
+
+  .bs-product-section {
+    padding-left: 25px;
+
+    padding-right: 25px;
+  }
+
+
+  .bs-product-section .jewellery-grid {
+    grid-template-columns:
+      repeat(3, minmax(0,1fr));
+
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MEDIUM
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .bs-product-section .jewellery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   EXACT SAME SIZES AS SHOP
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .bs-hero {
+    min-height: 82px;
+
+    margin: 0;
+  }
+
+
+  .bs-hero-content span {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .bs-hero-content h2 {
+    margin: 4px 0;
+
+    font-size: 27px;
+  }
+
+
+  .bs-hero-content p {
+    display: none;
+  }
+
+
+  /* =====================================================
+     TOOLBAR
+  ===================================================== */
+
+  .bs-toolbar {
+    width: 100%;
+
+    height: 34px;
+
+    min-height: 34px;
+
+    margin: 10px 0 16px;
+
+    padding:
+      0 10px;
+
+    justify-content:
+      space-between;
+
+    gap: 7px;
+  }
+
+
+  .bs-filter-button {
+    height: 32px;
+
+    padding: 0 10px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+  }
+
+
+  .bs-filter-button svg {
+    width: 12px;
+
+    height: 12px;
+  }
+
+
+  .bs-sort {
+    gap: 5px;
+  }
+
+
+  .bs-sort span {
+    display: none;
+  }
+
+
+  .bs-sort select {
+    width: 78px;
+
+    height: 32px;
+
+    padding: 0 7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     FILTER BOX
+  ===================================================== */
+
+  .bs-filter-box {
+    width:
+      calc(100% - 20px);
+
+    margin:
+      0 10px 12px;
+
+    padding: 8px;
+
+    gap: 5px;
+
+    border-radius: 8px;
+  }
+
+
+  .bs-filter-box button {
+    height: 29px;
+
+    padding: 7px 12px;
+
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     PRODUCT SECTION
+  ===================================================== */
+
+  .bs-product-section {
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+      0
+      10px
+      40px;
+  }
+
+
+  /* =====================================================
+     EXACT SHOP GRID
+  ===================================================== */
+
+  .bs-product-section .jewellery-grid {
+    width: 100%;
+
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    gap: 10px;
+  }
+
+
+  /* =====================================================
+     EMPTY
+  ===================================================== */
+
+  .bs-empty {
+    padding: 50px 15px;
+  }
+
+
+  .bs-empty h3 {
+    font-size: 25px;
+  }
+
+
+  .bs-empty p {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .bs-product-section {
+    padding:
+      0
+      9px
+      35px;
+  }
+
+
+  .bs-product-section .jewellery-grid {
+    gap: 8px;
+  }
+
+
+  .bs-toolbar {
+    padding:
+      0
+      9px;
+  }
+
+
+  .bs-filter-button {
+    height: 30px;
+
+    padding: 0 9px;
+
+    font-size: 7px;
+  }
+
+
+  .bs-sort select {
+    width: 72px;
+
+    height: 30px;
+
+    font-size: 7px;
+
+    padding: 0 6px;
+  }
+
+
+  .bs-filter-box button {
+    height: 28px;
+
+    padding: 6px 10px;
+
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .bs-product-section {
+    padding-left: 7px;
+
+    padding-right: 7px;
+  }
+
+
+  .bs-product-section .jewellery-grid {
+    gap: 7px;
+  }
+
+
+  .bs-toolbar {
+    padding-left: 7px;
+
+    padding-right: 7px;
+  }
+
+
+  .bs-filter-button {
+    height: 29px;
+
+    padding: 0 8px;
+
+    font-size: 7px;
+  }
+
+
+  .bs-sort select {
+    width: 68px;
+
+    height: 29px;
+
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.best-seller-page,
+.best-seller-page * {
+  box-sizing: border-box;
+}
+
+
+.best-seller-page {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+.best-seller-page .bs-product-section {
+  position: relative;
+
+  z-index: 1;
+}

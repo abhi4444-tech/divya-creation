@@ -1,0 +1,147 @@
+/* ==============================
+   CUSTOMER ORDERS
+============================== */
+
+.admin-orders-page {
+  width: 100%;
+}
+
+
+/* ==============================
+   ORDER LIST
+============================== */
+
+.admin-product-list {
+  width: 100%;
+}
+
+
+/* ==============================
+   ORDER ROW
+============================== */
+
+.admin-product-row {
+  transition: 0.2s ease;
+}
+
+.admin-product-row:hover {
+  background: #fff8fb;
+}
+
+
+/* ==============================
+   ORDER NAME
+============================== */
+
+.admin-product-name strong {
+  color: #222;
+}
+
+.admin-product-name span {
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* ==============================
+   ORDER PRICE
+============================== */
+
+.admin-product-price strong {
+  color: #e91e63;
+  font-size: 17px;
+}
+
+
+/* ==============================
+   ORDER STATUS
+============================== */
+
+.stock-available {
+  background: #e8f8ef;
+  color: #168a45;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ==============================
+   VIEW BUTTON
+============================== */
+
+.edit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 15px;
+
+  background: #e91e63;
+  color: white;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.edit-btn:hover {
+  background: #c2185b;
+}
+
+
+/* ==============================
+   EMPTY ORDERS
+============================== */
+
+.no-products {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.no-products > div {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.no-products h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.no-products p {
+  color: #888;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 768px) {
+
+  .admin-product-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .admin-product-actions {
+    width: 100%;
+  }
+
+  .edit-btn {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,143 @@
+.contact-page {
+  padding: 40px 20px 60px;
+  background: #fff8fa;
+  min-height: calc(100vh - 190px);
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.contact-heading span {
+  color: #e91e63;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.contact-heading h1 {
+  margin: 5px 0;
+  font-size: 32px;
+  color: #222;
+}
+
+.contact-heading p {
+  color: #777;
+  font-size: 14px;
+}
+
+.contact-box {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0,0,0,.08);
+}
+
+.contact-info {
+  padding: 35px;
+  background: #e91e63;
+  color: white;
+}
+
+.contact-info h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.contact-info div {
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+.contact-form {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #eee;
+  border-radius: 7px;
+  outline: none;
+  font-size: 13px;
+}
+
+.contact-form textarea {
+  height: 110px;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e91e63;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: 0;
+  border-radius: 7px;
+  background: #e91e63;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #c2185b;
+}
+
+@media (max-width: 650px) {
+  .contact-page {
+    margin-top: 260px;
+    padding: 30px 15px;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 25px;
+  }
+}
+
+/*back button*/
+
+.contact-back {
+  display: block;
+  margin: 0 0 20px 0;
+
+  padding: 9px 16px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #fff;
+  color: #333;
+
+  font-size: 13px;
+  cursor: pointer;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.contact-back:hover {
+  color: #e91e63;
+}
+

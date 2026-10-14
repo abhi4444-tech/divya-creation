@@ -1,0 +1,458 @@
+/* =================================
+   DIVYA CREATION - PAYMENT PAGE
+================================= */
+
+.payment-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  color: #222;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.payment-header {
+  height: 90px;
+
+  background: #fff;
+
+  border-bottom: 1px solid #eee;
+
+  padding: 0 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment-logo {
+  cursor: pointer;
+  text-align: center;
+}
+
+.payment-logo h1 {
+  margin: 0;
+
+  color: #d81b60;
+
+  font-size: 38px;
+
+  font-style: italic;
+
+  line-height: 30px;
+}
+
+.payment-logo span {
+  display: block;
+
+  color: #111;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  margin-top: 8px;
+}
+
+.payment-secure {
+  color: #444;
+
+  font-size: 16px;
+
+  font-weight: 500;
+}
+
+
+/* =================================
+   MAIN
+================================= */
+
+.payment-container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 35px auto;
+
+  display: grid;
+
+  grid-template-columns: 1.7fr 1fr;
+
+  gap: 30px;
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.payment-title {
+  margin-bottom: 20px;
+}
+
+.payment-title h2 {
+  margin: 0;
+
+  font-size: 28px;
+
+  color: #222;
+}
+
+.payment-title p {
+  margin: 7px 0 0;
+
+  color: #777;
+}
+
+
+/* =================================
+   PAYMENT CARD
+================================= */
+
+.payment-card {
+  background: #fff;
+
+  border: 1px solid #eee;
+
+  border-radius: 8px;
+
+  padding: 25px;
+}
+
+.payment-card h3 {
+  margin: 0 0 22px;
+
+  font-size: 21px;
+
+  color: #222;
+}
+
+
+/* =================================
+   PAYMENT OPTION
+================================= */
+
+.payment-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 17px;
+
+  margin-bottom: 13px;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.payment-option:hover {
+  border-color: #e91e63;
+}
+
+.payment-option.active {
+  border: 2px solid #e91e63;
+
+  background: #fff7fa;
+}
+
+.payment-option input {
+  width: 18px;
+
+  height: 18px;
+
+  accent-color: #e91e63;
+
+  flex-shrink: 0;
+}
+
+.payment-option-content {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.payment-option-content strong {
+  color: #222;
+
+  font-size: 16px;
+}
+
+.payment-option-content span {
+  color: #777;
+
+  font-size: 13px;
+}
+
+.payment-icon {
+  font-size: 25px;
+}
+
+
+/* =================================
+   PLACE ORDER
+================================= */
+
+.pay-now-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 15px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #e91e63;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.pay-now-btn:hover {
+  background: #d81b60;
+
+  box-shadow:
+    0 5px 15px
+    rgba(233, 30, 99, 0.25);
+}
+
+
+/* =================================
+   ORDER SUMMARY
+================================= */
+
+.payment-summary {
+  background: #fff;
+
+  border: 1px solid #eee;
+
+  border-radius: 8px;
+
+  padding: 20px;
+
+  position: sticky;
+
+  top: 20px;
+}
+
+.payment-summary h3 {
+  margin: 0 0 20px;
+
+  font-size: 21px;
+
+  color: #222;
+}
+
+
+/* =================================
+   PRODUCTS
+================================= */
+
+.payment-product {
+  display: flex;
+
+  gap: 14px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.payment-product-image {
+  width: 70px;
+
+  height: 70px;
+
+  flex-shrink: 0;
+
+  background: #fce4ec;
+
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.payment-product-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.payment-product-image span {
+  font-size: 30px;
+}
+
+.payment-product-info {
+  flex: 1;
+}
+
+.payment-product-info h4 {
+  margin: 0 0 6px;
+
+  font-size: 15px;
+
+  color: #222;
+}
+
+.payment-product-info p {
+  margin: 0 0 6px;
+
+  font-size: 13px;
+
+  color: #777;
+}
+
+.payment-product-info strong {
+  color: #e91e63;
+
+  font-size: 15px;
+}
+
+
+/* =================================
+   PRICE
+================================= */
+
+.payment-price {
+  margin-top: 15px;
+}
+
+.payment-price > div {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  color: #555;
+
+  font-size: 15px;
+}
+
+.payment-price strong {
+  color: #222;
+}
+
+.payment-price .payment-total {
+  margin-top: 8px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #ddd;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.payment-price .payment-total strong {
+  color: #e91e63;
+}
+
+
+/* =================================
+   DARK MODE OVERRIDE
+================================= */
+
+@media (prefers-color-scheme: dark) {
+
+  .payment-page {
+    background: #f8f8f8 !important;
+
+    color: #222 !important;
+  }
+
+  .payment-header,
+  .payment-card,
+  .payment-summary {
+    background: #fff !important;
+  }
+
+  .payment-logo span,
+  .payment-secure,
+  .payment-title h2,
+  .payment-title p,
+  .payment-card h3,
+  .payment-summary h3,
+  .payment-option-content strong,
+  .payment-product-info h4 {
+    color: #222 !important;
+  }
+
+  .payment-option {
+    background: #fff !important;
+
+    color: #222 !important;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+  .payment-header {
+    height: auto;
+
+    padding: 20px 5%;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .payment-container {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin: 25px auto;
+  }
+
+  .payment-summary {
+    position: static;
+  }
+
+  .payment-title h2 {
+    font-size: 24px;
+  }
+}

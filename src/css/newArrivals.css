@@ -1,0 +1,909 @@
+/* =========================================================
+   DIVYA CREATION
+   NEW ARRIVALS PAGE
+   SAME DESIGN AS SHOP
+========================================================= */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+);
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.new-arrivals-page {
+
+  --pink: #e91e63;
+
+  --dark-pink: #c2185b;
+
+  --gold: #a47738;
+
+  --black: #292525;
+
+  --muted: #777;
+
+
+  width: 100%;
+
+  min-height: 100vh;
+
+
+  background: #fffafc;
+
+  color: var(--black);
+
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.new-arrivals-container {
+
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding:
+    0
+    40px
+    70px;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.new-arrivals-hero {
+
+  width: 100%;
+
+  min-height: 125px;
+
+  margin:
+    0
+    0
+    15px;
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+  text-align: center;
+
+
+  background:
+
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(255,255,255,.9),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fff0f5,
+      #ffe1eb,
+      #fff5f8
+    );
+
+
+  border-bottom:
+    1px solid #f4dce5;
+
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================================================
+   HERO DECORATION
+========================================================= */
+
+.new-arrivals-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(233,30,99,.05);
+
+  left: -70px;
+
+  top: -80px;
+
+}
+
+
+.new-arrivals-hero::after {
+
+  content: "♡";
+
+  position: absolute;
+
+  right: 7%;
+
+  bottom: -55px;
+
+  font-size: 145px;
+
+  color:
+    rgba(233,30,99,.05);
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.new-arrivals-hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  animation:
+    newArrivalsHeroFade
+    .7s
+    ease;
+
+}
+
+
+.new-arrivals-hero-content span {
+
+  display: block;
+
+  color: var(--gold);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+}
+
+
+.new-arrivals-hero-content h1 {
+
+  margin:
+    4px
+    0;
+
+
+  color: #292525;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size: 36px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+}
+
+
+.new-arrivals-hero-content p {
+
+  margin:
+    5px
+    0
+    0;
+
+
+  color: #777;
+
+  font-size: 11px;
+
+}
+
+
+@keyframes newArrivalsHeroFade {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.new-arrivals-toolbar {
+
+  width: 100%;
+
+  min-height: 45px;
+
+  margin:
+    0
+    0
+    10px;
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+}
+
+
+.new-arrivals-count {
+
+  color: #777;
+
+  font-size: 11px;
+
+}
+
+
+/* =========================================================
+   SORT
+========================================================= */
+
+.new-arrivals-toolbar select {
+
+  width: 190px;
+
+  height: 42px;
+
+  padding:
+    0
+    12px;
+
+
+  border:
+    1px solid #eadde2;
+
+  border-radius: 6px;
+
+
+  background: #fff;
+
+  color: #444;
+
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+
+  outline: none;
+
+  cursor: pointer;
+
+
+  transition:
+    .25s;
+
+}
+
+
+.new-arrivals-toolbar select:hover,
+
+.new-arrivals-toolbar select:focus {
+
+  border-color:
+    var(--pink);
+
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.new-arrivals-products {
+
+  width: 100%;
+
+  margin:
+    0
+    0
+    42px;
+
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   SAME AS SHOP
+========================================================= */
+
+.new-arrivals-grid {
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 25px;
+
+}
+
+
+/* =========================================================
+   IMPORTANT
+   PRODUCT CARD COMES FROM
+   ProductCard.jsx
+
+   Therefore all these work:
+
+   - hover image
+   - wishlist
+   - cart
+   - buy now
+   - badges
+   - pricing
+   - animations
+========================================================= */
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.new-arrivals-loading {
+
+  width: 100%;
+
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+  color: #777;
+
+  font-size: 13px;
+
+}
+
+
+.new-arrivals-spinner {
+
+  width: 35px;
+
+  height: 35px;
+
+
+  border:
+    3px solid #f8d8e3;
+
+
+  border-top-color:
+    var(--pink);
+
+
+  border-radius: 50%;
+
+
+  animation:
+    newArrivalsSpin
+    .8s
+    linear
+    infinite;
+
+
+  margin-bottom: 12px;
+
+}
+
+
+@keyframes newArrivalsSpin {
+
+  from {
+
+    transform:
+      rotate(0deg);
+
+  }
+
+  to {
+
+    transform:
+      rotate(360deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.new-arrivals-empty {
+
+  width: 100%;
+
+  padding:
+    65px
+    20px;
+
+
+  text-align: center;
+
+
+  background: #fff;
+
+
+  border:
+    1px dashed #eadde2;
+
+
+  border-radius: 10px;
+
+}
+
+
+.new-arrivals-empty > div {
+
+  color:
+    var(--pink);
+
+  font-size: 45px;
+
+}
+
+
+.new-arrivals-empty h3 {
+
+  margin:
+    12px
+    0
+    5px;
+
+
+  color: #333;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size: 28px;
+
+}
+
+
+.new-arrivals-empty p {
+
+  margin: 0;
+
+  color: #999;
+
+  font-size: 12px;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .new-arrivals-container {
+
+    padding-left: 25px;
+
+    padding-right: 25px;
+
+  }
+
+
+  .new-arrivals-grid {
+
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0,1fr)
+      );
+
+    gap: 18px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MEDIUM
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .new-arrivals-grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0,1fr)
+      );
+
+    gap: 18px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .new-arrivals-container {
+
+    width: 100%;
+
+    padding:
+      0
+      10px
+      40px;
+
+  }
+
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .new-arrivals-hero {
+
+    min-height: 82px;
+
+    margin:
+      0
+      0
+      10px;
+
+  }
+
+
+  .new-arrivals-hero-content span {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+  }
+
+
+  .new-arrivals-hero-content h1 {
+
+    margin:
+      4px
+      0;
+
+    font-size: 27px;
+
+  }
+
+
+  .new-arrivals-hero-content p {
+
+    display: none;
+
+  }
+
+
+  /* =====================================================
+     TOOLBAR
+  ===================================================== */
+
+  .new-arrivals-toolbar {
+
+    width: 100%;
+
+    height: 34px;
+
+    min-height: 34px;
+
+    margin:
+      0
+      0
+      16px;
+
+    padding: 0;
+
+  }
+
+
+  .new-arrivals-count {
+
+    font-size: 8px;
+
+  }
+
+
+  .new-arrivals-toolbar select {
+
+    width: 78px;
+
+    height: 32px;
+
+    padding:
+      0
+      7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+  }
+
+
+  /* =====================================================
+     PRODUCTS
+  ===================================================== */
+
+  .new-arrivals-products {
+
+    clear: both;
+
+    width: 100%;
+
+    margin:
+      0
+      0
+      32px;
+
+  }
+
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .new-arrivals-grid {
+
+    width: 100%;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0,1fr)
+      );
+
+    gap: 10px;
+
+  }
+
+
+  /* =====================================================
+     EMPTY
+  ===================================================== */
+
+  .new-arrivals-empty {
+
+    padding:
+      50px
+      15px;
+
+  }
+
+
+  .new-arrivals-empty h3 {
+
+    font-size: 25px;
+
+  }
+
+
+  .new-arrivals-empty p {
+
+    font-size: 10px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .new-arrivals-container {
+
+    padding:
+      0
+      9px
+      35px;
+
+  }
+
+
+  .new-arrivals-hero {
+
+    min-height: 76px;
+
+    margin-bottom: 8px;
+
+  }
+
+
+  .new-arrivals-hero-content h1 {
+
+    font-size: 23px;
+
+  }
+
+
+  .new-arrivals-toolbar {
+
+    height: 32px;
+
+    min-height: 32px;
+
+  }
+
+
+  .new-arrivals-toolbar select {
+
+    width: 72px;
+
+    height: 30px;
+
+    font-size: 7px;
+
+    padding:
+      0
+      6px;
+
+  }
+
+
+  .new-arrivals-grid {
+
+    gap: 8px;
+
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .new-arrivals-container {
+
+    padding-left: 7px;
+
+    padding-right: 7px;
+
+  }
+
+
+  .new-arrivals-hero {
+
+    min-height: 70px;
+
+  }
+
+
+  .new-arrivals-hero-content h1 {
+
+    font-size: 21px;
+
+  }
+
+
+  .new-arrivals-grid {
+
+    gap: 7px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.new-arrivals-page,
+
+.new-arrivals-page * {
+
+  box-sizing: border-box;
+
+}
+
+
+.new-arrivals-page {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+.new-arrivals-page
+.new-arrivals-container {
+
+  position: relative;
+
+  z-index: 1;
+
+}

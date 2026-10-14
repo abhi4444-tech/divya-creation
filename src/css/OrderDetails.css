@@ -1,0 +1,577 @@
+/* =========================================
+   ORDER DETAILS PAGE
+========================================= */
+
+.admin-dashboard .admin-main {
+  background: #f8f6f2;
+}
+
+
+/* =========================================
+   TOP HEADER
+========================================= */
+
+.admin-dashboard .admin-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.admin-dashboard .admin-top h2 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+
+  color: #29251f;
+
+  margin: 0 0 5px;
+}
+
+.admin-dashboard .admin-top p {
+  color: #999;
+  font-size: 13px;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.admin-dashboard .add-product-button {
+  display: inline-block;
+
+  background: #2d2924;
+  color: #fff;
+
+  border-radius: 8px;
+
+  padding: 10px 17px;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.admin-dashboard .add-product-button:hover {
+  background: #a47738;
+}
+
+
+/* =========================================
+   MAIN ORDER CARD
+========================================= */
+
+.admin-dashboard .admin-order-card {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border: 1px solid #eee4d7;
+  border-radius: 15px;
+
+  padding: 28px;
+
+  box-shadow: 0 8px 25px rgba(60, 45, 25, 0.06);
+}
+
+
+/* =========================================
+   SECTION TITLES
+========================================= */
+
+.admin-dashboard .admin-order-card h3 {
+  font-family: Georgia, serif;
+
+  color: #a47738;
+
+  font-size: 18px;
+
+  margin: 24px 0 14px;
+
+  padding-bottom: 9px;
+
+  border-bottom: 1px solid #eee8df;
+}
+
+.admin-dashboard .admin-order-card h3:first-child {
+  margin-top: 0;
+}
+
+
+/* =========================================
+   CUSTOMER + ADDRESS TEXT
+========================================= */
+
+.admin-dashboard .admin-order-card p {
+  color: #68625b;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin: 7px 0;
+}
+
+.admin-dashboard .admin-order-card p strong {
+  color: #302c27;
+}
+
+
+/* =========================================
+   PRODUCTS
+========================================= */
+
+.admin-dashboard .admin-order-product {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: grid;
+
+  /*
+    Column 1 = Image
+    Column 2 = Product details
+    Column 3 = Quantity
+    Column 4 = Price
+  */
+
+  grid-template-columns: 75px 1fr auto auto;
+
+  /*
+    Row 1 = Name / Qty / Price
+    Row 2 = Address
+    Row 3 = Phone
+  */
+
+  grid-template-rows: auto auto auto;
+
+  column-gap: 18px;
+  row-gap: 4px;
+
+  align-items: center;
+
+  padding: 14px 16px;
+
+  margin: 10px 0;
+
+  background: #fbf9f6;
+
+  border: 1px solid #eee6dc;
+
+  border-radius: 12px;
+
+  transition: all 0.2s ease;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.admin-dashboard .order-product-image {
+  grid-column: 1;
+  grid-row: 1 / 4;
+
+  width: 70px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background: #f1ede7;
+}
+
+.admin-dashboard .order-product-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* If product has no image */
+
+.admin-dashboard .order-product-image span {
+  font-size: 25px;
+}
+
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.admin-dashboard .order-product-name {
+  grid-column: 2;
+  grid-row: 1;
+
+  min-width: 0;
+}
+
+.admin-dashboard .order-product-name strong {
+  display: block;
+
+  color: #35302a;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  margin: 0;
+}
+
+.admin-dashboard .order-product-name small {
+  display: block;
+
+  color: #aaa;
+
+  font-size: 12px;
+
+  margin-top: 4px;
+}
+
+
+/* =========================================
+   QUANTITY
+========================================= */
+
+.admin-dashboard .order-product-qty {
+  grid-column: 3;
+  grid-row: 1;
+
+  color: #777;
+
+  font-size: 15px;
+
+  white-space: nowrap;
+
+  padding: 0 8px;
+}
+
+
+/* =========================================
+   PRODUCT PRICE
+========================================= */
+
+.admin-dashboard .order-product-price {
+  grid-column: 4;
+  grid-row: 1;
+
+  min-width: 90px;
+
+  color: #a47738;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  text-align: right;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   PRODUCT ADDRESS
+========================================= */
+
+.admin-dashboard .order-product-address {
+  grid-column: 2 / 5;
+  grid-row: 2;
+
+  color: #68625b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================
+   PRODUCT PHONE
+========================================= */
+
+.admin-dashboard .order-product-phone {
+  grid-column: 2 / 5;
+  grid-row: 3;
+
+  color: #68625b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   PRODUCT HOVER
+========================================= */
+
+.admin-dashboard .admin-order-product:hover {
+  background: #fffaf1;
+
+  border-color: #dec395;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   PAYMENT / ORDER SUMMARY
+========================================= */
+
+.admin-dashboard .admin-order-card h2 {
+  text-align: right;
+
+  color: #a47738;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  padding-top: 18px;
+
+  margin-top: 18px;
+
+  border-top: 1px solid #eee5d9;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-dashboard .admin-order-card p strong {
+  color: #a47738;
+}
+
+
+/* =========================================
+   MOBILE - TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-dashboard .admin-main {
+    padding: 20px;
+  }
+
+  .admin-dashboard .admin-top {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .admin-dashboard .admin-order-card {
+    padding: 20px;
+  }
+
+
+  /* Product Card */
+
+  .admin-dashboard .admin-order-product {
+    grid-template-columns: 60px 1fr auto;
+
+    grid-template-rows:
+      auto
+      auto
+      auto
+      auto;
+
+    column-gap: 12px;
+
+    padding: 12px;
+  }
+
+
+  /* Image */
+
+  .admin-dashboard .order-product-image {
+    grid-column: 1;
+
+    grid-row: 1 / 5;
+
+    width: 60px;
+    height: 60px;
+  }
+
+
+  /* Product Name */
+
+  .admin-dashboard .order-product-name {
+    grid-column: 2;
+
+    grid-row: 1;
+  }
+
+  .admin-dashboard .order-product-name strong {
+    font-size: 15px;
+  }
+
+
+  /* Quantity */
+
+  .admin-dashboard .order-product-qty {
+    grid-column: 3;
+
+    grid-row: 1;
+
+    font-size: 13px;
+
+    padding: 0;
+  }
+
+
+  /* Price */
+
+  .admin-dashboard .order-product-price {
+    grid-column: 3;
+
+    grid-row: 2;
+
+    min-width: auto;
+
+    font-size: 15px;
+
+    text-align: right;
+  }
+
+
+  /* Address */
+
+  .admin-dashboard .order-product-address {
+    grid-column: 2 / 4;
+
+    grid-row: 3;
+
+    font-size: 12px;
+  }
+
+
+  /* Phone */
+
+  .admin-dashboard .order-product-phone {
+    grid-column: 2 / 4;
+
+    grid-row: 4;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   MOBILE - SMALL
+========================================= */
+
+@media (max-width: 480px) {
+
+  .admin-dashboard .admin-main {
+    padding: 15px;
+  }
+
+  .admin-dashboard .admin-order-card {
+    padding: 15px;
+  }
+
+
+  .admin-dashboard .admin-order-product {
+    grid-template-columns: 55px 1fr;
+
+    grid-template-rows:
+      auto
+      auto
+      auto
+      auto;
+
+    gap: 6px 10px;
+
+    padding: 12px;
+  }
+
+
+  /* Image */
+
+  .admin-dashboard .order-product-image {
+    grid-column: 1;
+
+    grid-row: 1 / 5;
+
+    width: 55px;
+    height: 55px;
+  }
+
+
+  /* Name */
+
+  .admin-dashboard .order-product-name {
+    grid-column: 2;
+
+    grid-row: 1;
+  }
+
+
+  /* Quantity */
+
+  .admin-dashboard .order-product-qty {
+    grid-column: 2;
+
+    grid-row: 2;
+
+    padding: 0;
+
+    font-size: 13px;
+  }
+
+
+  /* Price */
+
+  .admin-dashboard .order-product-price {
+    grid-column: 2;
+
+    grid-row: 3;
+
+    min-width: auto;
+
+    text-align: left;
+
+    font-size: 15px;
+  }
+
+
+  /* Address */
+
+  .admin-dashboard .order-product-address {
+    grid-column: 2;
+
+    grid-row: 4;
+
+    font-size: 12px;
+  }
+
+
+  /* Phone */
+
+  .admin-dashboard .order-product-phone {
+    grid-column: 2;
+
+    grid-row: 5;
+
+    font-size: 12px;
+  }
+}

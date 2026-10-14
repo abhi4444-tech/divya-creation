@@ -1,0 +1,231 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: 100vh;
+
+  background: #fff7fa;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+}
+
+
+/* CARD */
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+
+  background: #fff;
+
+  padding: 40px;
+
+  border: 1px solid #eee;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+}
+
+
+/* LOGO */
+
+.login-logo {
+  text-align: center;
+
+  cursor: pointer;
+
+  margin-bottom: 25px;
+}
+
+.login-logo h1 {
+  margin: 0;
+
+  color: #d81b60;
+
+  font-size: 40px;
+
+  font-style: italic;
+
+  line-height: 30px;
+}
+
+.login-logo span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #111;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+}
+
+
+/* TITLE */
+
+.login-card h2 {
+  text-align: center;
+
+  margin: 0;
+
+  color: #222;
+
+  font-size: 26px;
+}
+
+.login-subtitle {
+  text-align: center;
+
+  color: #777;
+
+  margin: 8px 0 30px;
+}
+
+
+/* FORM */
+
+.login-form-group {
+  margin-bottom: 20px;
+}
+
+.login-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #333;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.login-form-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  background: #fff !important;
+
+  color: #222 !important;
+
+  border: 1px solid #ddd;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  font-size: 15px;
+}
+
+.login-form-group input::placeholder {
+  color: #999 !important;
+}
+
+.login-form-group input:focus {
+  border-color: #e91e63;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(233, 30, 99, 0.08);
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #e91e63;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #d81b60;
+}
+
+
+/* REGISTER */
+
+.login-register {
+  text-align: center;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+
+  color: #777;
+}
+
+.login-register button {
+  border: none;
+
+  background: none;
+
+  color: #e91e63;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-left: 5px;
+}
+
+
+/* BACK HOME */
+
+.back-home-btn {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 12px;
+
+  background: white;
+
+  color: #e91e63;
+
+  border: 1px solid #e91e63;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+  .login-card {
+    padding: 30px 20px;
+  }
+
+}

@@ -1,0 +1,411 @@
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.register-page {
+  min-height: 100vh;
+
+  background: #fff7fa;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+}
+
+
+/* CARD */
+
+.register-card {
+  width: 100%;
+  max-width: 430px;
+
+  background: #fff;
+
+  padding: 40px;
+
+  border: 1px solid #eee;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+}
+
+
+/* LOGO */
+
+.register-logo {
+  text-align: center;
+
+  cursor: pointer;
+
+  margin-bottom: 25px;
+}
+
+.register-logo h1 {
+  margin: 0;
+
+  color: #d81b60;
+
+  font-size: 40px;
+
+  font-style: italic;
+
+  line-height: 30px;
+}
+
+.register-logo span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #111;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+}
+
+
+/* TITLE */
+
+.register-card h2 {
+  text-align: center;
+
+  margin: 0;
+
+  color: #222;
+
+  font-size: 26px;
+}
+
+.register-subtitle {
+  text-align: center;
+
+  color: #777;
+
+  margin: 8px 0 30px;
+}
+
+
+/* FORM */
+
+.register-form-group {
+  margin-bottom: 18px;
+}
+
+.register-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #333;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.register-form-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  background: #fff !important;
+
+  color: #222 !important;
+
+  border: 1px solid #ddd;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  font-size: 15px;
+}
+
+.register-form-group input::placeholder {
+  color: #999 !important;
+}
+
+.register-form-group input:focus {
+  border-color: #e91e63;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(233, 30, 99, 0.08);
+}
+
+
+/* REGISTER BUTTON */
+
+.register-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #e91e63;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #d81b60;
+}
+
+
+/* LOGIN */
+
+.register-login {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+.register-login button {
+  border: none;
+
+  background: none;
+
+  color: #e91e63;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-left: 5px;
+}
+
+
+/* HOME */
+
+.register-home-btn {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 12px;
+
+  background: white;
+
+  color: #e91e63;
+
+  border: 1px solid #e91e63;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   PREMIUM MOBILE VIEW ONLY
+========================= */
+
+@media (max-width: 500px) {
+
+  .register-page {
+    min-height: 100vh;
+    padding: 24px 16px;
+    align-items: center;
+
+    background:
+      radial-gradient(
+        circle at top,
+        #ffe8f1 0%,
+        #fff7fa 42%,
+        #fff 100%
+      );
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 390px;
+
+    padding: 34px 22px 28px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(216, 27, 96, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 20px 50px rgba(216, 27, 96, 0.10),
+      0 5px 18px rgba(0, 0, 0, 0.05);
+  }
+
+  /* LOGO */
+
+  .register-logo {
+    margin-bottom: 26px;
+  }
+
+  .register-logo h1 {
+    font-size: 36px;
+    line-height: 32px;
+  }
+
+  .register-logo span {
+    margin-top: 9px;
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    color: #555;
+  }
+
+  /* TITLE */
+
+  .register-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .register-subtitle {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 8px 0 26px;
+    color: #888;
+  }
+
+  /* FORM */
+
+  .register-form-group {
+    margin-bottom: 17px;
+  }
+
+  .register-form-group label {
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .register-form-group input {
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+
+    background: #fafafa !important;
+
+    font-size: 14px;
+
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .register-form-group input:focus {
+    background: #fff !important;
+
+    border-color: #e91e63;
+
+    box-shadow:
+      0 0 0 4px rgba(233, 30, 99, 0.07);
+  }
+
+  /* REGISTER BUTTON */
+
+  .register-btn {
+    height: 50px;
+
+    margin-top: 7px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+      135deg,
+      #ec407a,
+      #d81b60
+    );
+
+    box-shadow:
+      0 8px 18px rgba(216, 27, 96, 0.20);
+
+    font-size: 15px;
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .register-btn:hover {
+    background: linear-gradient(
+      135deg,
+      #ec407a,
+      #d81b60
+    );
+
+    box-shadow:
+      0 10px 22px rgba(216, 27, 96, 0.25);
+  }
+
+  /* LOGIN */
+
+  .register-login {
+    margin-top: 22px;
+
+    font-size: 13px;
+
+    color: #888;
+  }
+
+  .register-login button {
+    font-size: 13px;
+    color: #d81b60;
+  }
+
+  /* HOME */
+
+  .register-home-btn {
+    height: 46px;
+
+    margin-top: 16px;
+
+    padding: 0;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    border: 1px solid #f0b5ca;
+
+    color: #d81b60;
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+  }
+
+  .register-home-btn:hover {
+    background: #fff5f8;
+  }
+}

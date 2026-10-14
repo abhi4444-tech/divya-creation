@@ -1,0 +1,1227 @@
+/* =========================================================
+   DIVYA CREATION
+   WISHLIST PAGE
+
+   IMPORTANT:
+   PRODUCT CARDS ARE FROM ProductCard + Shop.css
+========================================================= */
+
+
+/* ============loading=============================================
+   PAGE
+========================================================= */
+
+.divya-wishlist {
+
+  --pink: #e91e63;
+  --dark-pink: #c2185b;
+  --gold: #a47738;
+  --black: #292525;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #fffafc;
+
+  color: var(--black);
+
+  font-family: "Poppins", sans-serif;
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.wishlist-container {
+
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding:
+    0
+    40px
+    70px;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+.wishlist-banner {
+
+  width: 100%;
+
+  min-height: 125px;
+
+  margin: 0 0 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(255,255,255,.95),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fff0f5,
+      #ffe1eb,
+      #fff5f8
+    );
+
+  border-bottom:
+    1px solid
+    #f4dce5;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+
+/* =========================================================
+   BANNER DECORATION
+========================================================= */
+
+.wishlist-banner::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(233,30,99,.05);
+
+  left: -70px;
+
+  top: -70px;
+
+}
+
+
+.wishlist-banner::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+
+  height: 140px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(164,119,56,.06);
+
+  right: -50px;
+
+  bottom: -50px;
+
+}
+
+
+/* =========================================================
+   BANNER CONTENT
+========================================================= */
+
+.wishlist-banner-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  animation:
+    wishlistBannerIn
+    .6s
+    ease
+    both;
+
+}
+
+
+.wishlist-banner-content h1 {
+
+  margin: 0 0 3px;
+
+  color: #292525;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 40px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+
+}
+
+
+.wishlist-banner-content p {
+
+  margin: 7px 0 0;
+
+  color: #777;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  letter-spacing: .4px;
+
+}
+
+
+/* =========================================================
+   BANNER ANIMATION
+========================================================= */
+
+@keyframes wishlistBannerIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(12px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.wishlist-topbar {
+
+  width: 100%;
+
+  min-height: 45px;
+
+  margin: 0 0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.wishlist-back-button {
+
+  height: 38px;
+
+  padding:
+    0 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    #eadde2;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  color: #555;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+
+    background .25s ease,
+
+    color .25s ease,
+
+    border-color .25s ease,
+
+    transform .25s ease,
+
+    box-shadow .25s ease;
+
+}
+
+
+.wishlist-back-button:hover {
+
+  background:
+    var(--pink);
+
+  border-color:
+    var(--pink);
+
+  color: #fff;
+
+  transform:
+    translateX(-2px);
+
+  box-shadow:
+    0 5px 14px
+    rgba(233,30,99,.18);
+
+}
+
+
+.wishlist-back-button:active {
+
+  transform:
+    scale(.96);
+
+}
+
+
+/* =========================================================
+   COUNT
+========================================================= */
+
+.wishlist-count {
+
+  min-height: 34px;
+
+  padding:
+    0 14px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  border:
+    1px solid
+    #eadde2;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  color: #555;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+}
+
+
+.wishlist-count span {
+
+  color:
+    var(--pink);
+
+  font-size: 13px;
+
+}
+
+
+/* =========================================================
+   PRODUCTS SECTION
+========================================================= */
+
+.wishlist-products-section {
+
+  width: 100%;
+
+  animation:
+    wishlistProductsIn
+    .5s
+    ease
+    both;
+
+}
+
+
+@keyframes wishlistProductsIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   IMPORTANT
+
+   USE EXACT SAME SHOP GRID
+========================================================= */
+
+.divya-wishlist
+.jewellery-grid {
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+}
+
+
+/* =========================================================
+   PRODUCT CARD ANIMATION
+
+   ProductCard already has the main hover animation
+   from Shop.css.
+
+   This only adds a subtle entrance animation.
+========================================================= */
+
+.divya-wishlist
+.product-card {
+
+  animation:
+    wishlistCardIn
+    .45s
+    ease
+    both;
+
+}
+
+
+.divya-wishlist
+.product-card:nth-child(1) {
+  animation-delay: .03s;
+}
+
+.divya-wishlist
+.product-card:nth-child(2) {
+  animation-delay: .07s;
+}
+
+.divya-wishlist
+.product-card:nth-child(3) {
+  animation-delay: .11s;
+}
+
+.divya-wishlist
+.product-card:nth-child(4) {
+  animation-delay: .15s;
+}
+
+.divya-wishlist
+.product-card:nth-child(5) {
+  animation-delay: .19s;
+}
+
+.divya-wishlist
+.product-card:nth-child(6) {
+  animation-delay: .23s;
+}
+
+.divya-wishlist
+.product-card:nth-child(7) {
+  animation-delay: .27s;
+}
+
+.divya-wishlist
+.product-card:nth-child(8) {
+  animation-delay: .31s;
+}
+
+
+@keyframes wishlistCardIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   EMPTY WISHLIST
+========================================================= */
+
+.wishlist-empty {
+
+  width: 100%;
+
+  min-height: 430px;
+
+  margin-top: 10px;
+
+  padding:
+    55px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #fff;
+
+  border:
+    1px dashed
+    #eadde2;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  animation:
+    wishlistEmptyIn
+    .5s
+    ease
+    both;
+
+}
+
+
+@keyframes wishlistEmptyIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   EMPTY ICON
+========================================================= */
+
+.wishlist-empty-icon {
+
+  width: 92px;
+
+  height: 92px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0f5,
+      #fff8fa
+    );
+
+  border:
+    1px solid
+    #f2dce4;
+
+  color:
+    var(--pink);
+
+  font-size: 58px;
+
+  line-height: 1;
+
+  box-shadow:
+    0 8px 25px
+    rgba(233,30,99,.07);
+
+  animation:
+    wishlistHeartFloat
+    2.5s
+    ease-in-out
+    infinite;
+
+}
+
+
+@keyframes wishlistHeartFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-5px);
+
+  }
+
+}
+
+
+/* =========================================================
+   EMPTY TITLE
+========================================================= */
+
+.wishlist-empty h2 {
+
+  margin:
+    0 0 7px;
+
+  color: #333;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   EMPTY TEXT
+========================================================= */
+
+.wishlist-empty p {
+
+  max-width: 420px;
+
+  margin:
+    0 0 20px;
+
+  color: #999;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   SHOP BUTTON
+========================================================= */
+
+.wishlist-shop-button {
+
+  min-height: 40px;
+
+  padding:
+    0 22px;
+
+  border:
+    1px solid
+    var(--pink);
+
+  border-radius: 5px;
+
+  background:
+    var(--pink);
+
+  color: #fff;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+
+    background .25s ease,
+
+    border-color .25s ease,
+
+    transform .25s ease,
+
+    box-shadow .25s ease;
+
+}
+
+
+.wishlist-shop-button:hover {
+
+  background:
+    var(--dark-pink);
+
+  border-color:
+    var(--dark-pink);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 7px 18px
+    rgba(233,30,99,.20);
+
+}
+
+
+.wishlist-shop-button:active {
+
+  transform:
+    scale(.97);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .wishlist-container {
+
+    padding-left: 25px;
+
+    padding-right: 25px;
+
+  }
+
+
+  .divya-wishlist
+  .jewellery-grid {
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MEDIUM
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .divya-wishlist
+  .jewellery-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .wishlist-container {
+
+    width: 100%;
+
+    padding:
+      0
+      10px
+      40px;
+
+  }
+
+
+  /* =====================================================
+     BANNER
+  ===================================================== */
+
+  .wishlist-banner {
+
+    min-height: 82px;
+
+    margin-bottom: 10px;
+
+  }
+
+
+  .wishlist-banner-content h1 {
+
+    font-size: 25px;
+
+  }
+
+
+  .wishlist-banner-content p {
+
+    margin-top: 5px;
+
+    font-size: 8px;
+
+  }
+
+
+  /* =====================================================
+     TOP BAR
+  ===================================================== */
+
+  .wishlist-topbar {
+
+    min-height: 34px;
+
+    margin-bottom: 10px;
+
+    gap: 8px;
+
+  }
+
+
+  .wishlist-back-button {
+
+    height: 32px;
+
+    padding:
+      0 12px;
+
+    font-size: 8px;
+
+  }
+
+
+  .wishlist-count {
+
+    min-height: 29px;
+
+    padding:
+      0 10px;
+
+    font-size: 8px;
+
+  }
+
+
+  .wishlist-count span {
+
+    font-size: 11px;
+
+  }
+
+
+  /* =====================================================
+     GRID
+
+     EXACT SHOP MOBILE GRID
+  ===================================================== */
+
+  .divya-wishlist
+  .jewellery-grid {
+
+    width: 100%;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+  }
+
+
+  /* =====================================================
+     CARD
+
+     SHOP CSS CONTROLS THE CARD
+  ===================================================== */
+
+  .divya-wishlist
+  .product-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+  }
+
+
+  /* =====================================================
+     EMPTY
+  ===================================================== */
+
+  .wishlist-empty {
+
+    min-height: 380px;
+
+    padding:
+      40px 15px;
+
+  }
+
+
+  .wishlist-empty-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    margin-bottom: 16px;
+
+    font-size: 48px;
+
+  }
+
+
+  .wishlist-empty h2 {
+
+    font-size: 26px;
+
+  }
+
+
+  .wishlist-empty p {
+
+    font-size: 10px;
+
+  }
+
+
+  .wishlist-shop-button {
+
+    min-height: 36px;
+
+    padding:
+      0 18px;
+
+    font-size: 9px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .wishlist-container {
+
+    padding:
+      0
+      9px
+      35px;
+
+  }
+
+
+  .wishlist-banner {
+
+    min-height: 76px;
+
+    margin-bottom: 8px;
+
+  }
+
+
+  .wishlist-banner-content h1 {
+
+    font-size: 23px;
+
+  }
+
+
+  .wishlist-banner-content p {
+
+    font-size: 7px;
+
+  }
+
+
+  .wishlist-topbar {
+
+    margin-bottom: 9px;
+
+  }
+
+
+  .wishlist-back-button {
+
+    height: 30px;
+
+    padding:
+      0 10px;
+
+    font-size: 7px;
+
+  }
+
+
+  .wishlist-count {
+
+    min-height: 27px;
+
+    padding:
+      0 8px;
+
+    font-size: 7px;
+
+  }
+
+
+  .divya-wishlist
+  .jewellery-grid {
+
+    gap: 8px;
+
+  }
+
+
+  .wishlist-empty {
+
+    min-height: 350px;
+
+  }
+
+
+  .wishlist-empty-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    font-size: 42px;
+
+  }
+
+
+  .wishlist-empty h2 {
+
+    font-size: 23px;
+
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .wishlist-container {
+
+    padding-left: 7px;
+
+    padding-right: 7px;
+
+  }
+
+
+  .wishlist-banner {
+
+    min-height: 70px;
+
+  }
+
+
+  .wishlist-banner-content h1 {
+
+    font-size: 21px;
+
+  }
+
+
+  .wishlist-banner-content p {
+
+    font-size: 6.5px;
+
+  }
+
+
+  .wishlist-back-button {
+
+    height: 29px;
+
+    padding:
+      0 9px;
+
+    font-size: 7px;
+
+  }
+
+
+  .wishlist-count {
+
+    font-size: 7px;
+
+  }
+
+
+  .divya-wishlist
+  .jewellery-grid {
+
+    gap: 7px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.divya-wishlist,
+.divya-wishlist * {
+
+  box-sizing: border-box;
+
+}
+
+
+.divya-wishlist {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+.divya-wishlist
+.wishlist-container {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+

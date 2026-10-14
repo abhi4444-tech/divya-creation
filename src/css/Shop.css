@@ -1,0 +1,1612 @@
+/* =========================================================
+   DIVYA CREATION
+   SHOP PAGE
+   HOME PRODUCT CARD DESIGN
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.divya-shop {
+  --pink: #e91e63;
+  --dark-pink: #c2185b;
+  --gold: #a47738;
+  --black: #292525;
+  --muted: #777;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #fffafc;
+  color: var(--black);
+
+  font-family: "Poppins", sans-serif;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   SHOP CONTAINER
+========================================================= */
+
+.shop-container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 0 40px 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SMALL PREMIUM BANNER
+========================================================= */
+
+.shop-container::before {
+  content: "DISCOVER OUR COLLECTION";
+
+  width: 100%;
+
+  min-height: 125px;
+
+  margin: 0 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  color: #292525;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 36px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(255,255,255,.9),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fff0f5,
+      #ffe1eb,
+      #fff5f8
+    );
+
+  border-bottom: 1px solid #f4dce5;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.shop-toolbar {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin: 0 0 10px;
+
+  min-height: 45px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-wrapper {
+  flex: 1;
+
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border: 1px solid #eadde2;
+  border-radius: 6px;
+
+  background: #fff;
+
+  box-sizing: border-box;
+}
+
+.search-wrapper > span {
+  color: var(--pink);
+  font-size: 21px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  color: #333;
+}
+
+.search-wrapper button {
+  border: none;
+
+  background: transparent;
+
+  color: #777;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SORT
+========================================================= */
+
+.shop-toolbar select {
+  width: 190px;
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #eadde2;
+  border-radius: 6px;
+
+  background: #fff;
+
+  color: #444;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.shop-toolbar select:hover,
+.shop-toolbar select:focus {
+  border-color: var(--pink);
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.category-scroll {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0 0 10px;
+
+  padding: 0 0 2px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+.category-scroll button {
+  flex-shrink: 0;
+
+  padding: 9px 17px;
+
+  border: 1px solid #eadde2;
+  border-radius: 20px;
+
+  background: #fff;
+
+  color: #555;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.category-scroll button:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+  transform: none;
+}
+
+
+.category-scroll button.active {
+  background: var(--pink);
+
+  border-color: var(--pink);
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.best-seller-section,
+.all-products-section {
+  width: 100%;
+
+  margin: 0 0 42px;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.jewellery-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =========================================================
+   HOME STYLE PRODUCT CARD
+========================================================= */
+
+.product-card {
+  position: relative;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform .3s,
+    box-shadow .3s;
+}
+
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+  width: 100%;
+
+  height: 390px;
+
+  position: relative;
+
+  background: #fff5f8;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE WRAPPER
+========================================================= */
+
+.product-images-wrapper {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+========================================================= */
+
+.product-images-wrapper .admin-product-home-image,
+.product-main-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   HOVER IMAGE
+========================================================= */
+
+.product-hover-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  z-index: 2;
+
+  opacity: 0;
+
+  transition:
+    opacity .35s ease;
+}
+
+
+/* =========================================================
+   HOVER IMAGE
+========================================================= */
+
+.product-card:hover
+.product-hover-image {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   NO ZOOM
+========================================================= */
+
+.product-card:hover
+.product-main-image,
+.product-card:hover
+.product-hover-image {
+  transform: none;
+}
+
+
+/* =========================================================
+   ALTERNATIVE HOME IMAGE WRAPPER
+========================================================= */
+
+.product-images {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE SLIDER
+========================================================= */
+
+.product-image-slider {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SLIDE IMAGES
+========================================================= */
+
+.product-slide-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform .55s
+    cubic-bezier(.4,0,.2,1);
+}
+
+
+/* =========================================================
+   FIRST IMAGE
+========================================================= */
+
+.first-image {
+  transform: translate(0,0);
+
+  z-index: 1;
+
+  transition:
+    transform .55s
+    cubic-bezier(.4,0,.2,1);
+}
+
+
+/* =========================================================
+   SECOND IMAGE
+========================================================= */
+
+.second-image {
+  transform:
+    translate(100%,-100%);
+
+  z-index: 2;
+
+  transition:
+    transform .55s
+    cubic-bezier(.4,0,.2,1);
+}
+
+
+/* =========================================================
+   SECOND IMAGE HOVER
+========================================================= */
+
+.product-card:hover
+.second-image {
+  transform: translate(0,0);
+}
+
+
+/* =========================================================
+   FIRST IMAGE HOVER
+========================================================= */
+
+.product-card:hover
+.first-image {
+  transform:
+    translate(-100%,100%);
+}
+
+
+/* =========================================================
+   ADMIN IMAGE
+========================================================= */
+
+.product-images-wrapper
+.admin-product-home-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    opacity .25s ease;
+}
+
+
+/* =========================================================
+   MAIN ADMIN IMAGE
+========================================================= */
+
+.product-images-wrapper
+.main-product-image {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   HOVER ADMIN IMAGE
+========================================================= */
+
+.product-images-wrapper
+.hover-product-image {
+  opacity: 0;
+}
+
+
+/* =========================================================
+   ADMIN HOVER
+========================================================= */
+
+.product-card:hover
+.product-images-wrapper
+.main-product-image {
+  opacity: 0;
+}
+
+.product-card:hover
+.product-images-wrapper
+.hover-product-image {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   PRODUCT PLACEHOLDER
+========================================================= */
+
+.product-placeholder {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: solid 1px #eee;
+
+  font-size: 105px;
+}
+
+
+/* =========================================================
+   SALE BADGE
+========================================================= */
+
+.sale-badge {
+  position: absolute;
+
+  left: 12px;
+  top: 12px;
+
+  z-index: 10;
+
+  background: #e91e63;
+
+  color: #fff;
+
+  padding: 6px 9px;
+
+  border-radius: 3px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.wishlist-btn {
+  position: absolute;
+
+  right: 12px;
+  top: 12px;
+
+  z-index: 20;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: #333;
+
+  font-size: 23px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0,0,0,.12);
+
+  transition:
+    color .2s,
+    transform .2s;
+}
+
+
+.wishlist-btn:hover {
+  color: #e91e63;
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   PRODUCT HOVER ACTIONS
+========================================================= */
+
+.product-hover-actions {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 15;
+
+  display: flex;
+
+  gap: 8px;
+
+  padding: 15px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.78),
+      rgba(0,0,0,0)
+    );
+
+  transform:
+    translateY(20px);
+
+  opacity: 0;
+
+  transition:
+    opacity .3s,
+    transform .3s;
+}
+
+
+.product-card:hover
+.product-hover-actions {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   HOME CART / BUY BUTTONS
+========================================================= */
+
+.hover-cart-btn,
+.hover-buy-btn {
+  flex: 1;
+
+  height: 42px;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+
+.hover-cart-btn {
+  border: 1px solid #e91e63;
+
+  background: #fff;
+
+  color: #e91e63;
+}
+
+
+.hover-cart-btn:hover {
+  background: #e91e63;
+
+  color: #fff;
+}
+
+
+.hover-cart-btn:disabled {
+  background: #eee;
+
+  color: #999;
+
+  border-color: #ddd;
+
+  cursor: not-allowed;
+}
+
+
+.hover-buy-btn {
+  border: 1px solid #e91e63;
+
+  background: #e91e63;
+
+  color: #fff;
+}
+
+
+.hover-buy-btn:hover {
+  background: #c2185b;
+
+  border-color: #c2185b;
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
+.product-info {
+  padding: 16px;
+
+  background: #fff;
+}
+
+
+.product-info h3 {
+  color: #333;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  margin: 0 0 7px;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.rating {
+  color: #555;
+
+  font-size: 12px;
+
+  margin-bottom: 3px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.price strong {
+  color: #111;
+
+  font-size: 19px;
+}
+
+
+.price del {
+  color: #999;
+
+  font-size: 12px;
+}
+
+
+.price span {
+  color: #e91e63;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   OUT OF STOCK
+========================================================= */
+
+.out-of-stock-text {
+  color: #d32f2f;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  margin-top: 7px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.shop-loading {
+  width: 100%;
+
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+.loading-spinner {
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid #f8d8e3;
+
+  border-top-color: #e91e63;
+
+  border-radius: 50%;
+
+  animation:
+    shopSpin .8s linear infinite;
+
+  margin-bottom: 12px;
+}
+
+
+@keyframes shopSpin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.no-products {
+  width: 100%;
+
+  padding: 65px 20px;
+
+  text-align: center;
+
+  background: #fff;
+
+  border: 1px dashed #eadde2;
+
+  border-radius: 10px;
+}
+
+
+.no-products > div {
+  color: var(--pink);
+
+  font-size: 45px;
+}
+
+
+.no-products h3 {
+  margin: 12px 0 5px;
+
+  color: #333;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 28px;
+}
+
+
+.no-products p {
+  margin: 0 0 18px;
+
+  color: #999;
+
+  font-size: 12px;
+}
+
+
+.no-products button {
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: var(--pink);
+
+  color: #fff;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.no-products button:hover {
+  background: var(--dark-pink);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .shop-container {
+    padding-left: 25px;
+
+    padding-right: 25px;
+  }
+
+
+  .jewellery-grid {
+    grid-template-columns:
+      repeat(3,minmax(0,1fr));
+
+    gap: 18px;
+  }
+
+
+  .product-image {
+    height: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   MEDIUM
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .jewellery-grid {
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    gap: 18px;
+  }
+
+
+  .product-image {
+    height: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .shop-container {
+    width: 100%;
+
+    padding:
+      0
+      10px
+      40px;
+  }
+
+
+  /* =====================================================
+     BANNER
+  ===================================================== */
+
+  .shop-container::before {
+    min-height: 82px;
+
+    margin: 0 0 10px;
+
+    font-size: 25px;
+
+    letter-spacing: .5px;
+  }
+
+
+  /* =====================================================
+     SORT
+  ===================================================== */
+
+  .shop-toolbar {
+    width: 78px;
+
+    height: 34px;
+
+    min-height: 34px;
+
+    margin: 0;
+
+    padding: 0;
+
+    float: left;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 0;
+  }
+
+
+  .shop-toolbar select {
+    width: 78px;
+
+    height: 32px;
+
+    padding: 0 7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     CATEGORY
+  ===================================================== */
+
+  .category-scroll {
+    width: calc(100% - 86px);
+
+    height: 34px;
+
+    min-height: 34px;
+
+    margin:
+      0 0 16px
+      86px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+  }
+
+
+  .category-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .category-scroll button {
+    height: 29px;
+
+    padding: 7px 12px;
+
+    font-size: 8px;
+
+    line-height: 1;
+  }
+
+
+  /* =====================================================
+     CLEAR FLOAT
+  ===================================================== */
+
+  .best-seller-section,
+  .all-products-section {
+    clear: both;
+
+    width: 100%;
+
+    margin: 0 0 32px;
+  }
+
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .jewellery-grid {
+    width: 100%;
+
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    gap: 10px;
+  }
+
+
+  /* =====================================================
+     HOME PRODUCT CARD
+  ===================================================== */
+
+  .product-card {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .product-card:hover {
+    transform: translateY(-3px);
+  }
+
+
+  /* =====================================================
+     PRODUCT IMAGE
+  ===================================================== */
+
+  .product-image {
+    width: 100%;
+
+    height: 205px;
+  }
+
+
+  /* =====================================================
+     BADGE
+  ===================================================== */
+
+  .sale-badge {
+    left: 7px;
+
+    top: 7px;
+
+    padding: 4px 5px;
+
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     WISHLIST
+  ===================================================== */
+
+  .wishlist-btn {
+    width: 28px;
+
+    height: 28px;
+
+    right: 7px;
+
+    top: 7px;
+
+    font-size: 17px;
+  }
+
+
+  /* =====================================================
+     HOVER ACTIONS
+  ===================================================== */
+
+  .product-hover-actions {
+    padding: 6px;
+
+    gap: 4px;
+  }
+
+
+  .hover-cart-btn,
+  .hover-buy-btn {
+    height: 31px;
+
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     PRODUCT INFO
+  ===================================================== */
+
+  .product-info {
+    padding: 9px;
+  }
+
+
+  .product-info h3 {
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    margin-bottom: 5px;
+  }
+
+
+  /* =====================================================
+     RATING
+  ===================================================== */
+
+  .rating {
+    font-size: 9px;
+
+    margin-bottom: 2px;
+  }
+
+
+  /* =====================================================
+     PRICE
+  ===================================================== */
+
+  .price {
+    gap: 4px;
+  }
+
+
+  .price strong {
+    font-size: 15px;
+  }
+
+
+  .price del {
+    font-size: 9px;
+  }
+
+
+  .price span {
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     EMPTY
+  ===================================================== */
+
+  .no-products {
+    padding: 50px 15px;
+  }
+
+
+  .no-products h3 {
+    font-size: 25px;
+  }
+
+
+  .no-products p {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .shop-container {
+    padding:
+      0
+      9px
+      35px;
+  }
+
+
+  .shop-container::before {
+    min-height: 76px;
+
+    margin-bottom: 8px;
+
+    font-size: 23px;
+  }
+
+
+  .shop-toolbar {
+    width: 72px;
+
+    height: 32px;
+
+    min-height: 32px;
+  }
+
+
+  .shop-toolbar select {
+    width: 72px;
+
+    height: 30px;
+
+    font-size: 7px;
+
+    padding: 0 6px;
+  }
+
+
+  .category-scroll {
+    width: calc(100% - 79px);
+
+    height: 32px;
+
+    min-height: 32px;
+
+    margin-left: 79px;
+
+    margin-bottom: 14px;
+
+    gap: 4px;
+  }
+
+
+  .category-scroll button {
+    height: 28px;
+
+    padding: 6px 10px;
+
+    font-size: 7px;
+  }
+
+
+  .best-seller-section,
+  .all-products-section {
+    margin-bottom: 28px;
+  }
+
+
+  .jewellery-grid {
+    gap: 8px;
+  }
+
+
+  .product-image {
+    height: 195px;
+  }
+
+
+  .product-info {
+    padding: 7px;
+  }
+
+
+  .product-info h3 {
+    font-size: 10px;
+
+    margin-bottom: 4px;
+  }
+
+
+  .rating {
+    font-size: 7px;
+  }
+
+
+  .price strong {
+    font-size: 13px;
+  }
+
+
+  .price del {
+    font-size: 8px;
+  }
+
+
+  .price span {
+    font-size: 7px;
+  }
+
+
+  .hover-cart-btn,
+  .hover-buy-btn {
+    height: 31px;
+
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .shop-container {
+    padding-left: 7px;
+
+    padding-right: 7px;
+  }
+
+
+  .shop-container::before {
+    min-height: 70px;
+
+    font-size: 21px;
+  }
+
+
+  .shop-toolbar {
+    width: 68px;
+  }
+
+
+  .shop-toolbar select {
+    width: 68px;
+
+    height: 29px;
+
+    font-size: 7px;
+  }
+
+
+  .category-scroll {
+    width: calc(100% - 75px);
+
+    height: 31px;
+
+    margin-left: 0;
+
+    margin-bottom: 12px;
+  }
+
+
+  .category-scroll button {
+    height: 27px;
+
+    padding: 6px 9px;
+
+    font-size: 7px;
+  }
+
+
+  .jewellery-grid {
+    gap: 7px;
+  }
+
+
+  .product-image {
+    height: 185px;
+  }
+
+
+  .product-info {
+    padding: 7px;
+  }
+
+
+  .product-info h3 {
+    font-size: 10px;
+  }
+
+
+  .rating {
+    font-size: 7px;
+  }
+
+
+  .price strong {
+    font-size: 12px;
+  }
+
+
+  .price del {
+    font-size: 7px;
+  }
+
+
+  .price span {
+    font-size: 6px;
+  }
+
+
+  .hover-cart-btn,
+  .hover-buy-btn {
+    height: 30px;
+
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.divya-shop,
+.divya-shop * {
+  box-sizing: border-box;
+}
+
+
+.divya-shop {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+.divya-shop .shop-container {
+  position: relative;
+
+  z-index: 1;
+}
