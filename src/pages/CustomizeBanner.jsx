@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/customize-banner.css";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function CustomizeBanner() {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ useEffect(() => {
   const loadBanners = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/banners"
+        `${API_URL}/api/banners`
       );
 
       const data = await response.json();
@@ -117,7 +118,7 @@ useEffect(() => {
 const saveBanners = async () => {
   try {
     const response = await fetch(
-      "http://localhost:5000/api/banners",
+      `${API_URL}/api/banners`,
       {
         method: "PUT",
         headers: {
@@ -162,7 +163,7 @@ const resetBanners = async () => {
 
   try {
     const response = await fetch(
-      "http://localhost:5000/api/banners",
+      `${API_URL}/api/banners`,
       {
         method: "DELETE",
       }

@@ -11,7 +11,7 @@ import "../css/reviews.css";
 
 import ProductCard from "../components/ProductCard";
 
-const API_URL = "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const showAlert = (title, message = "") =>
   alert(message ? `${title}\n${message}` : title);

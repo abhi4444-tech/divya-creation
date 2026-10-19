@@ -4,6 +4,7 @@ import {useParams, useNavigate,useLocation,} from "react-router-dom";
 import ProductReviews from "./ProductReviews";
 import "../css/ProductReviews.css";
 import "../css/productDetails.css";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function ProductDetails() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ function ProductDetails() {
   const fetchProduct = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`
+        `${API_URL}/api/products/${id}`
       );
 
       const data = await response.json();
@@ -123,7 +124,7 @@ const addToCart = async () => {
 
   try {
     const response = await fetch(
-      "http://localhost:5000/api/cart",
+      `${API_URL}/api/cart`,
       {
         method: "POST",
         credentials: "include",

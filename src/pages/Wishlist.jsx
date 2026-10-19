@@ -7,7 +7,7 @@ import "../css/wishlist.css";
 
 import ProductCard from "../components/ProductCard";
 
-const API_URL = "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Wishlist() {
   const navigate = useNavigate();

@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import "../css/SavedAddresses.css";
 
-const API_URL = "http://localhost:5000/api/addresses";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/addresses`;
 
 const emptyForm = {
   label: "Home",
@@ -27,6 +27,8 @@ const emptyForm = {
   state: "",
   pincode: "",
 };
+
+
 
 function SavedAddresses() {
   const navigate = useNavigate();

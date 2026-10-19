@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function AdminProducts() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function AdminProducts() {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/products"
+          `${API_URL}/api/products`
         );
 
         const data = await response.json();
@@ -50,7 +51,7 @@ function AdminProducts() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`,
+        `${API_URL}/api/products/${id}`,
         {
           method: "DELETE",
         }

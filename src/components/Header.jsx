@@ -17,7 +17,7 @@ import {
 
 import "../css/header.css";
 import "../css/navbar.css";
-
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Header() {
   const navigate = useNavigate();
@@ -78,7 +78,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/cart/${user.id}`,
+        `${API_URL}/api/cart/${user.id}`,
         {
           credentials: "include",
         }
@@ -111,7 +111,7 @@ useEffect(() => {
   const loadCategories = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/categories"
+        `${API_URL}/api/categories`
       );
 
       const data = await response.json();
@@ -171,7 +171,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/products"
+        `${API_URL}/api/products`
       );
 
       const data = await response.json();
